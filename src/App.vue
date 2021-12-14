@@ -1,14 +1,28 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import APIShit from './components/APIShit.vue'
+<script>
+
+  import axios from 'axios'
+
+  export default {
+    created() {
+      axios.get('https://api.openweathermap.org/data/2.5/onecall?lat=58.59&lon=25.01&exclude=hourly,daily&appid=da5ba07233d4b06864f111f800d573d6')
+        .then(response => {
+          console.log(response)
+          this.weather = response.data
+        })
+    },
+    data() {
+      return {
+        weather: ''
+      }
+    }
+  }
+
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
-  <APIShit />
+  <!--<img alt="Vue logo" src="./assets/logo.png" />-->
+
+  <p>{{ weather }}</p>
 </template>
 
 <style>
