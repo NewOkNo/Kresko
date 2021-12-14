@@ -29,16 +29,13 @@ export default async function getCurentWeather(){
         "mode": "cors"
       })
       .then(response => {
-        console.log(response)
+        //console.log(response.json())
         if(response.ok){
-          return response.json()
+          console.log(response.json())
+          //return response.json()
         } else{
           alert("Server returned " + response.status + " : " + response.statusText);
         }
-      })
-      .then(response => {
-        this.result = response.body;
-        this.responseAvailable = true;
       })
       .catch(err => {
         console.log(err);

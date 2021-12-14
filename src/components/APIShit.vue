@@ -11,9 +11,14 @@ export default {
     methods:{
         getWeather() {
             //getCurentWeather()
-            getCurentWeather().then(response => {
+            /*const response = getCurentWeather()
+            response.then(value => {
+                console.log(value)
+            })*/
+            /*getCurentWeather().then(response => {
                 console.log(response)
-            })
+            })*/
+            getCurentWeather().then(console.log)
         }
     }
 }
