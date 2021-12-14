@@ -1,5 +1,10 @@
 <script setup lang="ts">
 
+  /**
+   * Getting props
+   * 
+   * @returns Object
+   */
   const props = defineProps<{ data: Object }>();
 
 </script>

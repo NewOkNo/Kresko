@@ -4,6 +4,10 @@
   //const axios = require('axios')
   import BasicWeather from './components/BasicWeather.vue'
 
+  /**
+   *  Making API call to get the data from API
+   * 
+   * @returns Object */
   export default {
     created() {
         axios.get("https://api.openweathermap.org/data/2.5/onecall?lat=58.59&lon=25.01&exclude=hourly,daily&units=metric&appid=da5ba07233d4b06864f111f800d573d6")
