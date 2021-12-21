@@ -30,7 +30,7 @@
     </span>
   </div>
 
-  <p>{{ data }}</p>
+  <!--<p>{{ data }}</p>-->
 </template>
 
 <style>
